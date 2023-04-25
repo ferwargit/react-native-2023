@@ -1,7 +1,12 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 
-export default function App() {
+export default function App() { 
+
+  const handlePress = () => {
+    alert('El botón fue presionado');
+  }
+
   return (
     <>
     <StatusBar backgroundColor="#fffccc" barStyle="dark-content" />
@@ -11,7 +16,8 @@ export default function App() {
     <View style={styles.container2}>
       <Text>Hola Mundo</Text>
       <TextInput placeholder='Prueba' style={styles.textInput}></TextInput>
-      <TouchableOpacity style={styles.btnAlerta} onPress={()=>{alert('Tocado')}}>
+      {/* <TouchableOpacity style={styles.btnAlerta} onPress={handlePress}> */}
+      <TouchableOpacity style={styles.btnAlerta} onPress={()=> alert('El boton fue presionado2')}>
         <Text style={styles.btnText}>Alerta</Text>
       </TouchableOpacity>
     </View>
